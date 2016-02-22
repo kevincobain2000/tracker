@@ -522,6 +522,7 @@ class RepositoryManager implements RepositoryManagerInterface
                     $this->createRoutePathParameter($route_path_id, $parameter, $value);
                 }
             } else if ($created && $route_path_id && $request["parameter"] && $request["value"]) {
+                // for manual track::visit
                 $this->createRoutePathParameter($route_path_id, $request["parameter"], $request['value']);
             }
         }
